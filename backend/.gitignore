@@ -1,0 +1,21 @@
+# Node.js dependencies
+node_modules/
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# IDE settings
+.vscode/
+*.sublime-project
+*.idea/
+
+# Build outputs
+/dist
+/build
+
+# System files
+.DS_Store
+Thumbs.db

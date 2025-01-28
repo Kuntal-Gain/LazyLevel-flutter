@@ -1,2 +1,0 @@
-# LazyLevel
-Tshirt selling website

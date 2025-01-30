@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
+import 'package:lazylevel/main_screen.dart';
 
 import '../../features/authentication/presentation/screens/auth_screen.dart';
 import '../../features/authentication/presentation/screens/splash_screen.dart';
@@ -58,6 +59,12 @@ class AppRouter {
         name: 'checkout',
         builder: (context, state) => const CheckoutScreen(),
       ),
+
+      GoRoute(
+        path: '/main',
+        name: 'main',
+        builder: (context, state) => MainScreen(),
+      )
     ],
   );
 }

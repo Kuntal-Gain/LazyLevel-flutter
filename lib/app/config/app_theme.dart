@@ -43,3 +43,9 @@ class AppTheme {
     ),
   );
 }
+
+class AppColor {
+  static const Color primaryColor = Color(0xFFFFFFFF);
+  static const Color secondaryColor = Color(0xFFFF937B);
+  static const Color primaryTextColor = Color(0xFF000000);
+}

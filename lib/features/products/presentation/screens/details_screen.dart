@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lazylevel/app/config/app_router.dart';
 import 'package:lazylevel/app/config/app_theme.dart';
 import 'package:lazylevel/core/utils/toast.dart';
 
@@ -52,9 +54,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       Positioned(
                         top: 30,
                         left: 30,
-                        child: Icon(
-                          Icons.arrow_back_ios,
-                          size: 30,
+                        child: IconButton(
+                          onPressed: () {
+                            context.go('/main');
+                          },
+                          icon: Icon(
+                            Icons.arrow_back_ios,
+                            size: 30,
+                          ),
                         ),
                       ),
                       Positioned(

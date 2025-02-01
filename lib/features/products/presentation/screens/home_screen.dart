@@ -37,7 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.all(12.0),
                         child: CircleAvatar(
                           radius: 30,
-                          backgroundImage: AssetImage('assets/icons/user.png'),
+                          backgroundImage: NetworkImage(
+                              'https://images.unsplash.com/photo-1599566150163-29194dcaad36'),
                         ),
                       ),
                       SizedBox(width: 10),
@@ -60,37 +61,42 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Image.asset(
-                          'assets/icons/shopping-bag.png',
-                          height: 40,
-                          width: 40,
-                        ),
-                      ),
-                      Positioned(
-                        top: 8,
-                        left: 8,
-                        child: Container(
-                          height: 25,
-                          width: 25,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Center(
-                            child: Text(99.toString(),
-                                style: GoogleFonts.merienda(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                )),
+                  GestureDetector(
+                    onTap: () {
+                      context.go('/cart');
+                    },
+                    child: Stack(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Image.asset(
+                            'assets/icons/shopping-bag.png',
+                            height: 40,
+                            width: 40,
                           ),
                         ),
-                      )
-                    ],
+                        Positioned(
+                          top: 8,
+                          left: 8,
+                          child: Container(
+                            height: 25,
+                            width: 25,
+                            decoration: BoxDecoration(
+                              color: Colors.red,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Center(
+                              child: Text(99.toString(),
+                                  style: GoogleFonts.merienda(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  )),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),

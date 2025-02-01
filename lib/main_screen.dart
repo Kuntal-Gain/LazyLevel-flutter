@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:lazylevel/app/config/app_theme.dart';
+import 'package:lazylevel/features/authentication/presentation/screens/user_screen.dart';
 import 'package:lazylevel/features/products/presentation/screens/home_screen.dart';
+import 'package:lazylevel/features/products/presentation/screens/search_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -38,21 +40,13 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _screens = [
     HomeScreen(),
-    Container(
-      child: Center(
-        child: Text('search'),
-      ),
-    ),
+    SearchScreen(),
     Container(
       child: Center(
         child: Text('Likes'),
       ),
     ),
-    Container(
-      child: Center(
-        child: Text('User'),
-      ),
-    ),
+    UserScreen(),
   ];
 
   Widget _buildNavItem(int index) {
@@ -89,14 +83,14 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ),
 
-              // Line indicator for selected icon
-              if (isSelected)
-                Container(
-                  margin: const EdgeInsets.only(top: 4.0),
-                  width: 50.0, // Same width as the icon
-                  height: 2.0,
-                  color: AppColor.secondaryColor, // Selected color
-                ),
+              // // Line indicator for selected icon
+              // if (isSelected)
+              //   Container(
+              //     margin: const EdgeInsets.only(top: 4.0),
+              //     width: 50.0, // Same width as the icon
+              //     height: 2.0,
+              //     color: AppColor.secondaryColor, // Selected color
+              //   ),
             ],
           ),
         ),

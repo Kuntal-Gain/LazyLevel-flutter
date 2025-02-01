@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
+import 'package:lazylevel/features/authentication/presentation/screens/edit_profile_screen.dart';
 import 'package:lazylevel/main_screen.dart';
 
 import '../../features/authentication/presentation/screens/auth_screen.dart';
@@ -23,6 +24,16 @@ class AppRouter {
       GoRoute(
         path: '/auth',
         name: 'auth',
+        builder: (context, state) => const AuthScreen(),
+      ),
+      GoRoute(
+        path: '/edit-profile',
+        name: 'edit profile',
+        builder: (context, state) => const EditProfileScreen(),
+      ),
+      GoRoute(
+        path: '/orders',
+        name: 'orders',
         builder: (context, state) => const AuthScreen(),
       ),
 
